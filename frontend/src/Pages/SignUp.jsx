@@ -27,7 +27,7 @@ const SignUp = () => {
       const handleSignup = async (e) => {
         e.preventDefault();
         try {
-          const response = await axios.post('http://localhost:8001/users/register', formData);
+          const response = await axios.post('https://carmine-termite-wear.cyclic.app/users/register', formData);
           console.log(response.data);
           // Handle success (redirect, show a message, etc.)
           alert("successful done")

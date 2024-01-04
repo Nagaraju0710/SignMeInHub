@@ -21,7 +21,7 @@ export const Contact = () => {
         if (name == '' && email == '' && mobile == '') {
             toast({ title: 'Fill all the box', status: 'error', position: 'top', duration: 1500, isClosable: true, })
         } else {
-            axios.post(`http://localhost:8001/contact/add`, obj)
+            axios.post(`https://carmine-termite-wear.cyclic.app/contact/add`, obj)
                 .then((data) => {
                     // console.log(data.data)
                     toast({ title: 'Thank You', description: data.data.msg, status: 'success', position: 'top', duration: 1500, isClosable: true, })

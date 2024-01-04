@@ -19,7 +19,7 @@ export const EditUser=()=>{
   useEffect(() => {
     // Fetch user data by ID when the component mounts
     axios
-      .get(`http://localhost:8001/contact/${id}`)
+      .get(`https://carmine-termite-wear.cyclic.app/contact/${id}`)
       .then((response) => {
         setUser(response.data.contact);
       })
@@ -44,7 +44,7 @@ export const EditUser=()=>{
   const navigate = useNavigate();
   const handleUpdate = async () => {
     try {
-      await axios.patch(`http://localhost:8001/contact/update/${id}`, user);
+      await axios.patch(`https://carmine-termite-wear.cyclic.app/contact/update/${id}`, user);
       toast({
         title: "User updated successfully",
         status: "success",
@@ -69,7 +69,7 @@ export const EditUser=()=>{
   
 
   return (
-    <Box style={{ backgroundImage:`url(${bgg})` ,height:"465px" ,paddingTop:"30px"}}>
+    <Box style={{ backgroundImage:`url(${bgg})` ,height:"470px" ,paddingTop:"30px"}}>
       <Box
         display={"block"}
         w={["25%", "50%", "25%"]}

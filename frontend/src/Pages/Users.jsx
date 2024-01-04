@@ -14,7 +14,7 @@ export const Users = () => {
 
     console.log('data', data)
     useEffect(() => {
-        axios.get(`http://localhost:8001/contact${filterName ? `?name=${filterName}` : ''}`)
+        axios.get(`https://carmine-termite-wear.cyclic.app/contact${filterName ? `?name=${filterName}` : ''}`)
             .then((data) => {
                 setData(data.data.contact)
                 console.log(data.data.contact)
@@ -29,7 +29,7 @@ export const Users = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:8001/contact/delete/${id}`);
+            await axios.delete(`https://carmine-termite-wear.cyclic.app/contact/delete/${id}`);
             // Update the state or fetch the updated data from the server
             setData((prevData) => prevData.filter((user) => user._id !== id));
             toast({
@@ -68,7 +68,7 @@ export const Users = () => {
 
 
     return (
-        <Box style={{ backgroundImage: `url(${bg})`, height: "465px", paddingTop: "30px" }}>
+        <Box style={{ backgroundImage: `url(${bg})`, height: "480px", paddingTop: "30px" }}>
 
             <Input style={{width:"500px",border:"3px solid green"}}
                 type="text"

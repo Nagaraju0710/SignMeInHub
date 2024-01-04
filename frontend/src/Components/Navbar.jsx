@@ -57,8 +57,8 @@ export default function Navbar() {
     <div >
       <Box >
         <Flex>
-          <Box style={{ width: "620px" }}>
-            <Tabs size='sm' variant='' width={isAuth ? '227.9%' : '206.2%'} bg='lightgray' color='#fff'>
+          <Box>
+            <Tabs size='sm' variant='' width={isAuth ? '100vw' : '100vw'} bg='lightgray' color='#fff'>
               <TabList justifyContent='space-around'>
                 <Box
                   onClick={() => {
@@ -74,15 +74,17 @@ export default function Navbar() {
                 </Box>
                 <Box display='flex' height='60px'>
 
+                  {isAuth && (
+                    <Tab>
+                      <Button bg='#beec7f3'
+                        border='1px #cccc solid'
+                        _hover={{ bg: '#fff' }}><NavLink style={{ fontWeight: '400', fontSize: '15px', color: "cornflowerblue", fontFamily: "serif", fontSize: "20px", }} to='/'> All User</NavLink></Button>
+                    </Tab>
+                  )}
 
-                  <Tab>
-                    <Button bg='#beec7f3'
-                      border='1px #cccc solid'
-                      _hover={{ bg: '#fff' }}><NavLink style={{ fontWeight: '400', fontSize: '15px', color: "cornflowerblue", fontFamily: "serif", fontSize: "20px", }} to='/'> All User</NavLink></Button>
-                  </Tab>
                   {!isAuth && (
                     <Tab>
-                      <NavLink style={{ fontWeight: '700', fontSize: '25px', color: "red" }} to='/login'>Login</NavLink>
+                      <NavLink style={{ fontWeight: '700', fontSize: '25px', color: "darkgreen" }} to='/login'>Login</NavLink>
                     </Tab>
                   )}
 

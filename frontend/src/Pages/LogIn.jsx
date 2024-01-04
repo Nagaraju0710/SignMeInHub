@@ -27,7 +27,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     console.log(email, password);
-    const url = "http://localhost:8001/users/login";
+    const url = "https://carmine-termite-wear.cyclic.app/users/login";
     const res = await axios.post(url, { email, pass: password });
     if (res.status != 200) {
       toast({
